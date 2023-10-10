@@ -57,6 +57,6 @@ ___
 > #### When running `sudo nice -n -20 stress-ng --cpu 2 &` and monitoring our CPU with `iostat -xz 1`, we can see that our CPU only reaches about 34%. The additional 66% should be enough to handle the short burst of 14,000 GET requests.
 
 <p align="center">
-<img src="https://github.com/djtoler/Blitz2/blob/main/Screenshot%202023-10-10%20at%2012.28.44%20PM.png" width="300">
+<img src="https://github.com/djtoler/Blitz2/blob/main/Screenshot%202023-10-10%20at%2012.28.44%20PM.png">
 </p>
 
