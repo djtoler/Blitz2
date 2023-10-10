@@ -31,27 +31,32 @@ ___
 
 ___
 
-Diagnosis & Solution:
+## Diagnosis & Solution:
 
-We identified resource constraints on the t2.medium instance.
+#### _We identified resource constraints on the t2.medium instance._
 
 <p align="center">
 <img src="https://github.com/djtoler/Blitz2/blob/main/medium_cpu_user_blitz2.PNG">
 </p>
 
-The image above shows our 2 available CPUs working at 100%. 
+#### The image above shows our 2 available CPUs working at 100%. We need a way to distribute this workload amongst additional CPUs
 
 
-There are hundreds of different instance types available that serve different computing purposes. 
+### There are hundreds of different instance types available that serve different computing purposes. 
 
-<p align="center">
-<img src="https://github.com/djtoler/Blitz2/blob/main/00110CC3-CFA4-45A1-B134-598CBC182038.jpeg" height="300">
+<p align="left">
+<img src="https://github.com/djtoler/Blitz2/blob/main/00110CC3-CFA4-45A1-B134-598CBC182038.jpeg" height="500">
 </p>
 
-The t2.xlarge has 2 additional CPUs Since our test had a 99.5% success rate, scaling our instance vertically to a t2.xlarge will give us the additional processing power to handle the 14,000 requests and still have some available so that our server isnt operating at capacity and can possibly handle more request if necesary 
+> #### The t2.xlarge has 2 additional CPUs compared to our current t2.medium instance. Since our test had a 99.5% success rate, scaling our instance vertically to a t2.xlarge will give us the additional processing power to handle the 14,000 requests. We'll still have some available so that our server isnt operating at capacity and can possibly handle more request if necesary 
 
 ## Projected Results For Next Load Test:
 
-We anticipate being able to successfully handle all 14,000 users on t2.xlarge without errors due to the additional CPUs.
+> #### We anticipate being able to successfully handle all 14,000 users on t2.xlarge without errors due to the additional CPUs.
 
+> #### When running `sudo nice -n -20 stress-ng --cpu 2 &` and monitoring our CPU with `iostat -xz 1`, we can see that our CPU only reaches about 34%. The additional 66% should be enough to handle the short burst of 14,000 GET requests.
+
+<p align="center">
+<img src="https://github.com/djtoler/Blitz2/blob/main/Screenshot%202023-10-10%20at%2012.28.44%20PM.png" width="300">
+</p>
 
