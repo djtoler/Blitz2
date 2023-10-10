@@ -2,9 +2,9 @@
 
 Initial Load Test:
 
-Our application initially had its available CPUs handling stress from "sudo nice -n -20 stress-ng --cpu 2 &"
+Our application initially had its available CPUs handling stress from "sudo nice -n -20 stress-ng --cpu 2 &". 
 
-Our QA engineer simulated user load using JMeter. They sent 14,000 GET requests to our application server at http://52.90.119.24/5000
+Our QA engineer simulated user load using JMeter. They sent 14,000 GET requests to our application server at `http://52.90.119.24/5000`
 
 Before Remediation
 
@@ -12,13 +12,20 @@ Before Remediation
 * Failed Requests: 67
 * Server Resource Utilization: 100%
 
+During Remediation
+
+* Stopped our EC2 instance
+* Detached the EBS volume from our current instance 
+* Vertically scaled our infrastructure to a instance with double rhe available CPUs
+* Restarted our EC2 instance
+
 After Remediation (projected)
 
 * Successful Requests: 14000
 * Failed Requests: 0
 * Server Resource Utilization: 50%
 
-Diagnosis & Fixes:
+Diagnosis & Solution:
 
 We identified resource constraints on the t2.medium instance.
 
@@ -26,7 +33,7 @@ We identified resource constraints on the t2.medium instance.
 <img src="https://github.com/djtoler/Blitz2/blob/main/medium_cpu_user_blitz2.PNG">
 </p>
 
-The image above shows our 2 available CPUs working at 100%
+The image above shows our 2 available CPUs working at 100%. 
 
 
 We switched to a t2.xlarge instance to double the CPU count.
