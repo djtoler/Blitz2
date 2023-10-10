@@ -54,7 +54,7 @@ ___
 
 > #### We anticipate being able to successfully handle all 14,000 users on t2.xlarge without errors due to the additional CPUs.
 
-> #### When running `sudo nice -n -20 stress-ng --cpu 2 &` and monitoring our CPU with `iostat -xz 1`, we can see that our CPU only reaches about 34%. The additional 66% should be enough to handle the short burst of 14,000 GET requests.
+> #### When running `sudo nice -n -20 stress-ng --cpu 2 &` and monitoring our CPU with `iostat -xz 1`, while using our new t2.xlarge instance... we can see that our CPU only reaches about 34%. We anticipate that the additional 66% should be enough to handle the short burst of 14,000 GET requests.
 
 <p align="center">
 <img src="https://github.com/djtoler/Blitz2/blob/main/Screenshot%202023-10-10%20at%2012.28.44%20PM.png">
