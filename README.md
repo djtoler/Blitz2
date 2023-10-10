@@ -2,7 +2,8 @@
 
 Initial Load Test:
 
-Our application initially had its available CPUs handling stress from 
+Our application initially had its available CPUs handling stress from "sudo nice -n -20 stress-ng --cpu 2 &"
+
 Our QA engineer simulated user load using JMeter. They sent 14,000 GET requests to our application server at http://52.90.119.24/5000
 
 Before Remediation
