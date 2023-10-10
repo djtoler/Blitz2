@@ -45,12 +45,12 @@ The image above shows our 2 available CPUs working at 100%.
 There are hundreds of different instance types available that serve different computing purposes. 
 
 <p align="center">
-<img src="https://github.com/djtoler/Blitz2/blob/main/00110CC3-CFA4-45A1-B134-598CBC182038.jpeg">
+<img src="https://github.com/djtoler/Blitz2/blob/main/00110CC3-CFA4-45A1-B134-598CBC182038.jpeg" height="300">
 </p>
 
 The t2.xlarge has 2 additional CPUs Since our test had a 99.5% success rate, scaling our instance vertically to a t2.xlarge will give us the additional processing power to handle the 14,000 requests and still have some available so that our server isnt operating at capacity and can possibly handle more request if necesary 
 
-Projected Results For Next Load Test:
+## Projected Results For Next Load Test:
 
 We anticipate being able to successfully handle all 14,000 users on t2.xlarge without errors due to the additional CPUs.
 
