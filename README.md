@@ -13,6 +13,12 @@
 
 ___
 
+## Load Test Diagram
+<p align="left">
+<img src="https://github.com/djtoler/Blitz2/blob/main/Blitz2_Diagram.png">
+</p>
+
+
 ### Before Remediation
 
 * Successful Requests: 13,933
