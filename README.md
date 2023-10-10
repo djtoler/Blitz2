@@ -10,7 +10,7 @@ Before Remediation
 
 * Successful Requests: 13,933
 * Failed Requests: 67
-*Server Resource Utilization: 100%
+* Server Resource Utilization: 100%
 
 After Remediation (projected)
 
