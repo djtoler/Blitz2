@@ -8,15 +8,15 @@ Our QA engineer simulated user load using JMeter. They sent 14,000 GET requests 
 
 Before Remediation
 
-Successful Requests: 13,933
-Failed Requests: 67
-Server Resource Utilization: 100%
+* Successful Requests: 13,933
+* Failed Requests: 67
+*Server Resource Utilization: 100%
 
 After Remediation (projected)
 
-Successful Requests: 14000
-Failed Requests: 0
-Server Resource Utilization: 50%
+* Successful Requests: 14000
+* Failed Requests: 0
+* Server Resource Utilization: 50%
 
 Diagnosis & Fixes:
 
