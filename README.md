@@ -4,7 +4,10 @@
 > #### _Implement a solution that will ensure that our URL shortener application infrastructure can successfully handle 14,000 GET requests at any given time._
 
 ## Initial Load Test:
-> #### _Our application initially had its available CPUs handling stress from the following command: `sudo nice -n -20 stress-ng --cpu 2 &`._ 
+> #### _Our instance we're starting out with is a t2.medium, that has 2 CPUs_
+> #### _Our application initially had its available CPUs handling stress from the following command: `sudo nice -n -20 stress-ng --cpu 2 &`._
+* > ##### `sudo nice -n -20` is a command that will give the command that follows it, prioroty in task scheduling of our machine. `nice` established that we want priority, `-n -20` set our "niceness" value to 20, which is the highest priority.
+* > ##### `stress-ng --cpu 2` will be used to simulate high CPU utilization on 2 CPUs on our machine. 
 
 > #### _Our QA engineer simulated user load using JMeter. They sent 14,000 GET requests to our application server at `http://52.90.119.24/5000`_
 
